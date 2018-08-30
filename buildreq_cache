@@ -1,0 +1,5 @@
+0.05
+perl(DBD::SQLite)
+perl(DBIx::Class)
+perl(Module::Install)
+perl(SQL::Translator)
