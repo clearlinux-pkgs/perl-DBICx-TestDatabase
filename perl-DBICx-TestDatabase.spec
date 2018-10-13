@@ -4,7 +4,7 @@
 #
 Name     : perl-DBICx-TestDatabase
 Version  : 0.05
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/J/JR/JROCKWAY/DBICx-TestDatabase-0.05.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/J/JR/JROCKWAY/DBICx-TestDatabase-0.05.tar.gz
 Summary  : 'create a temporary database from a DBIx::Class::Schema'
@@ -27,7 +27,7 @@ See "perldoc DBICx::TestDatabase" for more info.
 %package dev
 Summary: dev components for the perl-DBICx-TestDatabase package.
 Group: Development
-Provides: perl-DBICx-TestDatabase-devel
+Provides: perl-DBICx-TestDatabase-devel = %{version}-%{release}
 
 %description dev
 dev components for the perl-DBICx-TestDatabase package.
@@ -52,9 +52,9 @@ fi
 %install
 rm -rf %{buildroot}
 if test -f Makefile.PL; then
-make pure_install PERL_INSTALL_ROOT=%{buildroot}
+make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
-./Build install --installdirs=site --destdir=%{buildroot}
+./Build install --installdirs=vendor --destdir=%{buildroot}
 fi
 find %{buildroot} -type f -name .packlist -exec rm -f {} ';'
 find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null ';'
@@ -63,8 +63,8 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.1/DBICx/TestDatabase.pm
-/usr/lib/perl5/site_perl/5.26.1/DBICx/TestDatabase/Subclass.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBICx/TestDatabase.pm
+/usr/lib/perl5/vendor_perl/5.26.1/DBICx/TestDatabase/Subclass.pm
 
 %files dev
 %defattr(-,root,root,-)
