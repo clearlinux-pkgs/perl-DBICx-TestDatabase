@@ -4,10 +4,10 @@
 #
 Name     : perl-DBICx-TestDatabase
 Version  : 0.05
-Release  : 8
+Release  : 9
 URL      : https://cpan.metacpan.org/authors/id/J/JR/JROCKWAY/DBICx-TestDatabase-0.05.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/J/JR/JROCKWAY/DBICx-TestDatabase-0.05.tar.gz
-Summary  : 'create a temporary database from a DBIx::Class::Schema'
+Summary  : create a temporary database from a DBIx::Class::Schema
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 BuildRequires : buildreq-cpan
@@ -28,6 +28,7 @@ See "perldoc DBICx::TestDatabase" for more info.
 Summary: dev components for the perl-DBICx-TestDatabase package.
 Group: Development
 Provides: perl-DBICx-TestDatabase-devel = %{version}-%{release}
+Requires: perl-DBICx-TestDatabase = %{version}-%{release}
 
 %description dev
 dev components for the perl-DBICx-TestDatabase package.
