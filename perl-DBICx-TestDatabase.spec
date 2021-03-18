@@ -4,7 +4,7 @@
 #
 Name     : perl-DBICx-TestDatabase
 Version  : 0.05
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/J/JR/JROCKWAY/DBICx-TestDatabase-0.05.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/J/JR/JROCKWAY/DBICx-TestDatabase-0.05.tar.gz
 Summary  : 'create a temporary database from a DBIx::Class::Schema'
@@ -83,5 +83,5 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/DBICx/TestDatabase.pm
-/usr/lib/perl5/vendor_perl/5.30.3/DBICx/TestDatabase/Subclass.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBICx/TestDatabase.pm
+/usr/lib/perl5/vendor_perl/5.32.1/DBICx/TestDatabase/Subclass.pm
