@@ -7,7 +7,7 @@
 #
 Name     : perl-DBICx-TestDatabase
 Version  : 0.05
-Release  : 26
+Release  : 27
 URL      : https://cpan.metacpan.org/authors/id/J/JR/JROCKWAY/DBICx-TestDatabase-0.05.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/J/JR/JROCKWAY/DBICx-TestDatabase-0.05.tar.gz
 Summary  : 'create a temporary database from a DBIx::Class::Schema'
